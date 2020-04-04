@@ -53,7 +53,7 @@ namespace GUITråd
             {
 
 
-            lock (locker)//Locker
+            lock (locker)//Locker // So only 1 Thread at a time can acces it. If there is Thread "1" that it is using it the other Thread "2" that want to acces it will wait so the Thread "1" is done using the method and than Thread 2 will acces the method.
             {
                 for (int x = 1; x <= 10; x++)
                 {
